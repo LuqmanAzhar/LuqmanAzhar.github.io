@@ -1,3 +1,19 @@
-.sitenav:active {
-    background-color: #e5c07b;
-  }
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.active,
+.btn:hover {
+  background-color: #666;
+  color: white;
+}
+.btn-content {
+  display: none;
+}

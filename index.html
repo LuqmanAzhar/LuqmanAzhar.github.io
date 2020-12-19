@@ -1,20 +1,42 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="global.css" />
     <title>Luqman Azhar</title>
+    <link rel="stylesheet" href="css/global.css" />
   </head>
+
   <body>
-    <div>
-      <nav class="sitenav">
-        <a href="../" class="sitenav">Home</a>
-        <a href="../projects" class="sitenav">Projects</a>
-        <a href="../resume" class="sitenav">About</a>
-        <a href="../blog" class="sitenav"></a>
-      </nav>
+    <h1 class="name">Luqman Azhar</h1>
+
+    <div class="header">
+      <div id="nav-bar">
+        <button
+          class="nav-btn"
+          id="defaultopen"
+          onclick="openPage('about', this)"
+        >
+          About
+        </button>
+        <button class="nav-btn" onclick="openPage('projects', this)">
+          Projects
+        </button>
+        <button class="nav-btn" onclick="openPage('resume', this)">
+          Resume
+        </button>
+        <button class="nav-btn" onclick="openPage('blog', this)">Blog</button>
+      </div>
     </div>
-    <div>In the Works</div>
+
+    <div class="content">
+      <div class="btn-content" id="about">About content</div>
+      <div class="btn-content" id="projects">Projects Content</div>
+      <div class="btn-content" id="resume">resume content</div>
+      <div class="btn-content" id="blog">blog Content</div>
+    </div>
+
+    <script type="text/javascript" src="js/navbtn.js"></script>
   </body>
 </html>
