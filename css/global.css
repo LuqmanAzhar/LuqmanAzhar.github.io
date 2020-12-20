@@ -17,3 +17,7 @@
 .btn-content {
   display: none;
 }
+body {
+  background-color: #282c34;
+  color: #abb2bf;
+}
