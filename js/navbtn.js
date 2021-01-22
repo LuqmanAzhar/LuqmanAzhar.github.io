@@ -1,4 +1,4 @@
-function openPage(pageName, element) {
+function openContent(pageName, element) {
   var i, btncontent, navlinks;
   btncontent = document.getElementsByClassName("btn-content");
   for (i = 0; i < btncontent.length; i++) {
@@ -13,4 +13,4 @@ function openPage(pageName, element) {
   element.className += " active"
 }
 
-document.getElementById("defaultopen").click();
+document.getElementById("defaultopen").click();  // TODO: Seems Like Bad Convention
