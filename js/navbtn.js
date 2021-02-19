@@ -1,5 +1,5 @@
 function openContent(pageName, element) {
-  var i, btncontent, navlinks;
+  let i, btncontent, navlinks;
   btncontent = document.getElementsByClassName("btn-content");
   for (i = 0; i < btncontent.length; i++) {
     btncontent[i].style.display = "none";

@@ -21,3 +21,9 @@ body {
   background-color: #282c34;
   color: #abb2bf;
 }
+.proj-description {
+  outline: #56b6c2;
+}
+.proj-title {
+  color: #56b6c2;
+}
