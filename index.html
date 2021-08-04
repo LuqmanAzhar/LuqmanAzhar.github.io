@@ -12,8 +12,8 @@
   <body>
     <h1 class="name">Luqman Azhar</h1>
 
-    <div class="header">
-      <div id="nav-bar">
+    <header>
+      <div id="navbar">
         <button
           class="nav-btn"
           id="defaultopen"
@@ -27,19 +27,31 @@
         <button class="nav-btn" onclick="openContent('resume', this)">
           Resume
         </button>
-        <button class="nav-btn" onclick="openContent('blog', this)">
-          Blog
-        </button>
       </div>
-    </div>
+    </header>
 
-    <div class="content">
-      <div class="btn-content" id="about">test</div>
-      <div class="btn-content" id="projects">Projects Content</div>
-      <div class="btn-content" id="resume">resume content</div>
-      <div class="btn-content" id="blog">blog Content</div>
-    </div>
+    <main class="content">
+      <div class="btn-content" id="about">
+        Explaination about this site and who i am
+      </div>
+      <div class="btn-content" id="projects">List of Projects</div>
+      <div class="btn-content" id="resume">
+        LinkedIn style of historical places i worked and studied
+      </div>
+    </main>
+    >
   </body>
+
+  <footer>
+    Section needs to be on the bottom of the page (out of sight on standard web)
+    (mobile)
+    <div id="public pages">Links to Blog and Github</div>
+    <div id="contact-foot">
+      <a href="mailto:ContactMe@luqmanazhar.com" id="email-link"
+        >ContactMe@luqmanazhar.com</a
+      >
+    </div>
+  </footer>
   <script type="text/javascript" src="js/navbtn.js"></script>
   <script type="text/javascript" src="js/projectload.js"></script>
 </html>
