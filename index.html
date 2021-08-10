@@ -12,23 +12,21 @@
   <body>
     <h1 class="name">Luqman Azhar</h1>
 
-    <header>
-      <div id="navbar">
-        <button
-          class="nav-btn"
-          id="defaultopen"
-          onclick="openContent('about', this)"
-        >
-          About
-        </button>
-        <button class="nav-btn" onclick="openContent('projects', this);">
-          Projects
-        </button>
-        <button class="nav-btn" onclick="openContent('resume', this)">
-          Resume
-        </button>
-      </div>
-    </header>
+    <nav id="navbar">
+      <button
+        class="nav-btn"
+        id="defaultopen"
+        onclick="openContent('about', this)"
+      >
+        About
+      </button>
+      <button class="nav-btn" onclick="openContent('projects', this);">
+        Projects
+      </button>
+      <button class="nav-btn" onclick="openContent('resume', this)">
+        Resume
+      </button>
+    </nav>
 
     <main class="content">
       <div class="btn-content" id="about">
@@ -39,14 +37,11 @@
         LinkedIn style of historical places i worked and studied
       </div>
     </main>
-    >
   </body>
 
   <footer>
-    Section needs to be on the bottom of the page (out of sight on standard web)
-    (mobile)
-    <div id="public pages">Links to Blog and Github</div>
-    <div id="contact-foot">
+    <div class="footer-left" id="public pages">Links to Blog and Github</div>
+    <div class="footer-right" id="contact-foot">
       <a href="mailto:ContactMe@luqmanazhar.com" id="email-link"
         >ContactMe@luqmanazhar.com</a
       >
