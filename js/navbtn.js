@@ -6,10 +6,10 @@ function openContent(id, element) {
   }
   navlinks = document.getElementsByClassName("navbar__btn");
   for (i = 0; i < navlinks.length; i++) {
-    navlinks[i].className = navlinks[i].className.replace(" navbar_active", "");
+    navlinks[i].className = navlinks[i].className.replace(" navbar__btn_active", "");
   }
   document.getElementById(id).className += " h-show";
-  element.className += " navbar_active"
+  element.className += " navbar__btn_active"
 }
 
 document.getElementById("defaultopen").click();  // TODO: Seems Like Bad Convention
