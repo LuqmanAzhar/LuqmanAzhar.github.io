@@ -3,12 +3,25 @@
   zoom: 1;
 }
 
+:root {
+  --main-colour: #abb2bf;
+  --background-colour: #282c34;
+  --vertical-margin: 20px;
+  --dark-accent-colour: rgba(102, 102, 102, 0.404);
+  --link-colour: #61afef;
+}
+
+.split {
+  border: 1px solid var(--dark-accent-colour);
+  width: 60%;
+}
+
 .page {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #282c34;
-  color: #abb2bf;
+  background-color: var(--background-colour);
+  color: var(--main-colour);
 
   max-width: 720px;
   margin: 0 auto;
@@ -22,21 +35,21 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: ;
+  margin: var(--vertical-margin);
 }
 
 .navbar__btn {
   border: none;
   outline: none;
   padding: 10px 16px;
-  background-color: #f1f1f1;
+  background-color: var(--background-colour);
+  color: var(--main-colour);
   margin: 0 auto;
   cursor: pointer;
 }
 .navbar--active,
-.navbar-btn:hover {
-  background-color: #666;
-  color: white;
+.navbar__btn:hover {
+  color: var(--dark-accent-colour);
 }
 
 .l-content {
@@ -45,6 +58,10 @@
 
 .content {
   display: none;
+}
+
+.content--centered {
+  text-align: center;
 }
 
 .proj-description {
@@ -82,7 +99,7 @@
 }
 
 .footer {
-  margin: 40px 0;
+  margin: var(--vertical-margin) 0;
   justify-self: flex-end;
 }
 
