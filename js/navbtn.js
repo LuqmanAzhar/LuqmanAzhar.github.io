@@ -1,16 +1,15 @@
-function openContent(pageName, element) {
+function openContent(id, element) {
   let i, btncontent, navlinks;
-  btncontent = document.getElementsByClassName("btn-content");
+  btncontent = document.getElementsByClassName("content");
   for (i = 0; i < btncontent.length; i++) {
-    btncontent[i].style.display = "none";
+    btncontent[i].className = btncontent[i].className.replace(" h-show", "");
   }
-  navlinks = document.getElementsByClassName("nav-btn");
+  navlinks = document.getElementsByClassName("navbar__btn");
   for (i = 0; i < navlinks.length; i++) {
-    navlinks[i].className = navlinks[0].className.replace(" active", "");
+    navlinks[i].className = navlinks[i].className.replace(" navbar--active", "");
   }
-  document.getElementById(pageName).style.display = "block";
-  console.log(element)
-  element.className += " active"
+  document.getElementById(id).className += " h-show";
+  element.className += " navbar--active"
 }
 
 document.getElementById("defaultopen").click();  // TODO: Seems Like Bad Convention

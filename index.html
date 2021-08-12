@@ -9,63 +9,67 @@
     <link rel="stylesheet" href="css/global.css" />
   </head>
 
-  <body>
-    <h1 class="name">Luqman Azhar</h1>
-
-    <nav id="navbar">
+  <body class="page">
+    <h1 class="banner">Luqman Azhar</h1>
+    <hr />
+    <nav class="navbar">
       <button
-        class="nav-btn"
+        class="navbar__btn"
         id="defaultopen"
         onclick="openContent('about', this)"
       >
         About
       </button>
-      <button class="nav-btn" onclick="openContent('projects', this);">
+      <button class="navbar__btn" onclick="openContent('projects', this);">
         Projects
       </button>
-      <button class="nav-btn" onclick="openContent('resume', this)">
+      <button class="navbar__btn" onclick="openContent('resume', this)">
         Resume
       </button>
     </nav>
+    <hr />
 
-    <main class="content">
-      <div class="btn-content" id="about">
+    <main class="l-content">
+      <div class="content" id="about">
         Explaination about this site and who i am
       </div>
-      <div class="btn-content" id="projects">List of Projects</div>
-      <div class="btn-content" id="resume">
+      <div class="content" id="projects">List of Projects</div>
+      <div class="content" id="resume">
         LinkedIn style of historical places i worked and studied
       </div>
     </main>
   </body>
-
-  <footer>
-    <ul class="wrap-links">
-      <li class="footer-left" id="public-pages">
-        <div class="icon-links">
-          <a href="https://github.com/LuqmanAzhar" class="public-link"
+  <hr />
+  <footer class="footer">
+    <div class="l-links">
+      <div class="l-links__item">
+        <div class="l-icons">
+          <a href="https://github.com/LuqmanAzhar" class="icon"
             ><img
               src="img/GitHub-Mark-Light-32px.png"
               alt="link to Luqman's Github Profile"
               height="32"
           /></a>
-          <a href="#" class="public-link"
+          <a href="#" class="icon"
             ><img
               src="img/LI-In-Bug.png"
               alt="link to Luqman's LinkedIn Profile"
               height="32"
           /></a>
-          <a href="https://blog.luqmanazhar.com" class="public-link"
-            ><img src="img/blog.png" alt="link to Luqman's Blog" height="32"
+          <a href="https://blog.luqmanazhar.com" class="icon"
+            ><img
+              src="img/blog.png"
+              alt="link to Luqman Azhar's Blog"
+              height="32"
           /></a>
         </div>
-      </li>
-      <li class="footer-right" id="contact-foot">
-        <a href="mailto:ContactMe@luqmanazhar.com" id="email-link"
+      </div>
+      <div class="l-links__item" id="email-link">
+        <a href="mailto:ContactMe@luqmanazhar.com" class="email-link"
           >ContactMe@luqmanazhar.com</a
         >
-      </li>
-    </ul>
+      </div>
+    </div>
   </footer>
   <script type="text/javascript" src="js/navbtn.js"></script>
   <script type="text/javascript" src="js/projectload.js"></script>
