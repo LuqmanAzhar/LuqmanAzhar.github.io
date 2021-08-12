@@ -47,12 +47,13 @@
   margin: 0 auto;
   cursor: pointer;
 }
-.navbar--active,
+.navbar_active,
 .navbar__btn:hover {
   color: var(--dark-accent-colour);
 }
 
 .l-content {
+  margin: 10px;
   flex: 1;
 }
 
