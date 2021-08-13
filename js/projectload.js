@@ -3,10 +3,10 @@ function loadProjects(projectList) {
     for (const projectObj of projectList) {
 
         let div = document.createElement("div");
-        div.className = "project";
+        div.className = "l-project";
 
-        let h = document.createElement("h3");
-        h.className = "proj-title";
+        let h = document.createElement("h2");
+        h.className = "proj__title";
         h.innerHTML = projectObj.title;
 
         let links = document.createElement("div");
@@ -14,15 +14,22 @@ function loadProjects(projectList) {
         let repo = document.createElement("a");
 
         link.href = projectObj.link;
-        link.innerHTML = "link";
+        link.innerHTML = `<img src="img/blog.png" 
+            alt="link to Project Write Up" 
+            height="32">`;
+        link.className = "icon";
         repo.href = projectObj.repo;
-        repo.innerHTML = "repo";
+        repo.className = "icon";
+        repo.innerHTML = `<img src="img/GitHub-Mark-Light-32px.png" 
+            alt="link to project Github" 
+            height="32">`;
         links.appendChild(link);
         links.appendChild(repo);
+        links.className = "proj__links l-icons";
 
         let p = document.createElement("p");
         p.innerHTML = projectObj.description;
-        p.className = "proj-description";
+        p.className = "project__description";
 
         let img = document.createElement("img");
         if (projectObj.img) {
@@ -30,12 +37,24 @@ function loadProjects(projectList) {
         } else {
             img.src = "img/" + projectObj.title + ".svg"
         }
-        img.alt = projectObj.title
+        img.alt = projectObj.title;
+        img.className = "proj__image";
+        img.height = "200";
+        img.width = "200";
 
+        let tags = document.createElement("div");
+        tags.className = "proj__tags"
+        for (const item of projectObj.tags) {
+            let tag = document.createElement("a");
+            tag.className = "proj__tag";
+            tag.innerHTML = item;
+            tags.append(tag);
+        }
         div.appendChild(h);
         div.appendChild(links);
         div.appendChild(p);
-        div.appendChild(img)
+        div.appendChild(img);
+        div.appendChild(tags);
 
         projsDiv.appendChild(div);
     }
