@@ -75,10 +75,6 @@
   display: none;
 }
 
-.content_centered {
-  text-align: center;
-}
-
 .content__project-list {
   flex-direction: column;
   justify-content: center;
