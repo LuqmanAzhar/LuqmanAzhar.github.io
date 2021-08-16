@@ -29,7 +29,7 @@ function loadProjects(projectList) {
 
         let p = document.createElement("p");
         p.innerHTML = projectObj.description;
-        p.className = "project__description";
+        p.className = "proj__description";
 
         let img = document.createElement("img");
         if (projectObj.img) {
@@ -43,18 +43,24 @@ function loadProjects(projectList) {
         img.width = "200";
 
         let tags = document.createElement("div");
-        tags.className = "proj__tags"
+        tags.className = "proj__tags";
         for (const item of projectObj.tags) {
             let tag = document.createElement("a");
             tag.className = "proj__tag";
             tag.innerHTML = item;
             tags.append(tag);
         }
-        div.appendChild(h);
+
+        let card = document.createElement("div");
+        card.className = "proj__card";
+        card.appendChild(img);
+        card.appendChild(h);
+
+
         div.appendChild(links);
         div.appendChild(p);
-        div.appendChild(img);
         div.appendChild(tags);
+        div.appendChild(card);
 
         projsDiv.appendChild(div);
     }
