@@ -7,6 +7,7 @@
   --main-colour: #abb2bf;
   --background-colour: #282c34;
   --vertical-margin: 20px;
+  --horizontal-margin: 20px;
   --dark-accent-colour: rgba(102, 102, 102, 0.404);
   --dark-reading-colour: rgba(46, 45, 45, 0.925);
   --light-accent-colour: #e5c07b;
@@ -75,10 +76,6 @@
   display: none;
 }
 
-.content_centered {
-  text-align: center;
-}
-
 .content__project-list {
   flex-direction: column;
   justify-content: center;
@@ -86,18 +83,21 @@
 
 .l-project {
   display: grid;
-  grid-template-columns: 200px 3fr 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-columns: 225px 3fr 1fr;
+  grid-template-rows: 225px 1fr;
   grid-template-areas:
-    "image desc desc"
-    "title tags links";
+    "card desc desc"
+    "card tags links";
   border-radius: 25px;
   border: 2px solid var(--dark-accent-colour);
 }
 
 .proj__description {
   grid-area: desc;
+  padding: var(--vertical-margin);
   outline: #56b6c2;
+  text-align: center;
+  align-self: center;
 }
 
 .proj__links {
@@ -128,6 +128,16 @@
 
 .proj__image {
   grid-area: image;
+  margin-top: var(--vertical-margin);
+  margin-bottom: 0;
+}
+
+.proj__card {
+  display: flex;
+  grid-area: card;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .l-links {
@@ -164,7 +174,47 @@
 }
 
 .h-show {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .content__project-list {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 280px;
+    grid-area: "active active";
+    row-gap: var(--vertical-margin);
+    column-gap: var(--horizontal-margin);
+  }
+  .l-project {
+    grid-template-columns: 200px;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas:
+      "card"
+      "card";
+    justify-content: center;
+    border: none;
+  }
+  .l-project_active {
+    display: grid;
+    grid-area: active;
+    grid-template-columns: 225px 3fr 1fr;
+    grid-template-rows: 225px 1fr;
+    grid-template-areas:
+      "card desc desc"
+      "card tags links";
+    border-radius: 25px;
+    border: 2px solid var(--light-accent-colour);
+  }
+
+  .proj__tags,
+  .proj__links,
+  .proj__description {
+    display: none;
+  }
+  .proj__card {
+    border-radius: 25px;
+    border: 2px solid var(--dark-accent-colour);
+  }
 }

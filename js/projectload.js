@@ -6,14 +6,18 @@ function loadProjects(projectList) {
         div.className = "l-project";
 
         let h = document.createElement("h2");
+        let title_link = document.createElement("a");
+        title_link.href = projectObj.link;
+        title_link.className = "a";
         h.className = "proj__title";
         h.innerHTML = projectObj.title;
+        title_link.appendChild(h);
 
         let links = document.createElement("div");
         let link = document.createElement("a");
         let repo = document.createElement("a");
 
-        link.href = projectObj.link;
+        link.href = projectObj.blog;
         link.innerHTML = `<img src="img/blog.png" 
             alt="link to Project Write Up" 
             height="32">`;
@@ -29,11 +33,11 @@ function loadProjects(projectList) {
 
         let p = document.createElement("p");
         p.innerHTML = projectObj.description;
-        p.className = "project__description";
+        p.className = "proj__description";
 
         let img = document.createElement("img");
-        if (projectObj.img) {
-            img.src = projectObj.img;
+        if (projectObj.image) {
+            img.src = projectObj.image;
         } else {
             img.src = "img/" + projectObj.title + ".svg"
         }
@@ -43,18 +47,24 @@ function loadProjects(projectList) {
         img.width = "200";
 
         let tags = document.createElement("div");
-        tags.className = "proj__tags"
+        tags.className = "proj__tags";
         for (const item of projectObj.tags) {
             let tag = document.createElement("a");
             tag.className = "proj__tag";
             tag.innerHTML = item;
             tags.append(tag);
         }
-        div.appendChild(h);
+
+        let card = document.createElement("div");
+        card.className = "proj__card";
+        card.appendChild(img);
+        card.appendChild(title_link);
+
+
         div.appendChild(links);
         div.appendChild(p);
-        div.appendChild(img);
         div.appendChild(tags);
+        div.appendChild(card);
 
         projsDiv.appendChild(div);
     }
