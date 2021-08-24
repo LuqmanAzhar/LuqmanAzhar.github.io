@@ -1,26 +1,11 @@
 const PROJECT_DATA = [
-    {   "title": "test1",
-        "description": "this is test 1",
-        "link": "https://en.wikipedia.org/wiki/1",
-        "repo": "https://en.wikipedia.org/wiki/A",
-        "tags": ["testing", "application"]
-        },
-    {   "title": "test2",
-        "description": "this is test 2",
-        "link": "https://en.wikipedia.org/wiki/2",
-        "repo": "https://en.wikipedia.org/wiki/B",
-        "tags": ["test", "biggestbestest"],
-        },
-        {   "title": "test1",
-        "description": "this is test 1",
-        "link": "https://en.wikipedia.org/wiki/1",
-        "repo": "https://en.wikipedia.org/wiki/A",
-        "tags": ["devie", "test", "heheh", "more"]
-        },
-    {   "title": "test2",
-        "description": "this is test 2",
-        "link": "https://en.wikipedia.org/wiki/2",
-        "repo": "https://en.wikipedia.org/wiki/B",
-        "tags": ["2"]
+    {   "title": "Personal Portfolio",
+        "description": `This is a simple webpage to host all my projects. Used this as the entry point to learn how to practically implement the frontend technologies. 
+        \n Including how some entry level hosting details with custom domains.` ,
+        "blog": "https://blog.luqmanazhar.com/portfolio/2021/08/17/portfolio-design.html",
+        "repo": "https://github.com/LuqmanAzhar/LuqmanAzhar.github.io",
+        "tags": ["Front End", "HTML", "CSS", "Javascript"],
+        "image": "img/blog.png",
+        "link": "https://luqmanazhar.com/"
         }
        ]   // TODO: WHY USE an object¡™

@@ -94,7 +94,10 @@
 
 .proj__description {
   grid-area: desc;
+  padding: var(--vertical-margin);
   outline: #56b6c2;
+  text-align: center;
+  align-self: center;
 }
 
 .proj__links {
@@ -125,10 +128,16 @@
 
 .proj__image {
   grid-area: image;
+  margin-top: var(--vertical-margin);
+  margin-bottom: 0;
 }
 
 .proj__card {
+  display: flex;
   grid-area: card;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .l-links {

@@ -6,14 +6,18 @@ function loadProjects(projectList) {
         div.className = "l-project";
 
         let h = document.createElement("h2");
+        let title_link = document.createElement("a");
+        title_link.href = projectObj.link;
+        title_link.className = "a";
         h.className = "proj__title";
         h.innerHTML = projectObj.title;
+        title_link.appendChild(h);
 
         let links = document.createElement("div");
         let link = document.createElement("a");
         let repo = document.createElement("a");
 
-        link.href = projectObj.link;
+        link.href = projectObj.blog;
         link.innerHTML = `<img src="img/blog.png" 
             alt="link to Project Write Up" 
             height="32">`;
@@ -32,8 +36,8 @@ function loadProjects(projectList) {
         p.className = "proj__description";
 
         let img = document.createElement("img");
-        if (projectObj.img) {
-            img.src = projectObj.img;
+        if (projectObj.image) {
+            img.src = projectObj.image;
         } else {
             img.src = "img/" + projectObj.title + ".svg"
         }
@@ -54,7 +58,7 @@ function loadProjects(projectList) {
         let card = document.createElement("div");
         card.className = "proj__card";
         card.appendChild(img);
-        card.appendChild(h);
+        card.appendChild(title_link);
 
 
         div.appendChild(links);
